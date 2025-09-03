@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engage Now Africa - Social Media Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Background slideshow */
+        .slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .slideshow-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: fade 30s infinite;
+        }
+
+        .image1 {
+            background-image: url('/bg1.jpeg');
+            animation-delay: 0s;
+        }
+
+        .image2 {
+            background-image: url('/bg2.jpeg');
+            animation-delay: 6s;
+        }
+
+        .image3 {
+            background-image: url('/bg3.jpeg');
+            animation-delay: 12s;
+        }
+
+        .image4 {
+            background-image: url('/bg4.jpeg');
+            animation-delay: 18s;
+        }
+
+        .image5 {
+            background-image: url('/bg5.jpeg');
+            animation-delay: 24s;
+        }
+
+        @keyframes fade {
+
+            0%,
+            20% {
+                opacity: 1;
+            }
+
+            25%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: -1;
+        }
+
+        /* Container */
+        .container {
+            max-width: 700px;
+            width: 90%;
+            padding: 2.5rem;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            animation: fadeInUp 1.2s ease;
+            margin-bottom: 3rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #f7e600, #ff6f61, #34a853);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .flag {
+            width: 35px;
+            margin-left: 10px;
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media(max-width: 600px) {
+            .links {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            color: #fff;
+            border: 2px solid transparent;
+        }
+
+        .social-link i {
+            font-size: 1.3rem;
+        }
+
+        .social-link:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .facebook {
+            background: #1877f2;
+            border-color: #1877f2;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+            border-color: #dd2a7b;
+        }
+
+        .linkedin {
+            background: #0a66c2;
+            border-color: #0a66c2;
+        }
+
+        .youtube {
+            background: #ff0000;
+            border-color: #ff0000;
+        }
+
+        .website {
+            background: #34a853;
+            border-color: #34a853;
+        }
+
+        .donate {
+            background: linear-gradient(45deg, #ff6f61, #ff9472);
+            border-color: #ff6f61;
+        }
+
+        .social-link:hover.facebook {
+            box-shadow: 0 0 20px #1877f2;
+        }
+
+        .social-link:hover.instagram {
+            box-shadow: 0 0 20px #dd2a7b;
+        }
+
+        .social-link:hover.linkedin {
+            box-shadow: 0 0 20px #0a66c2;
+        }
+
+        .social-link:hover.youtube {
+            box-shadow: 0 0 20px #ff0000;
+        }
+
+        .social-link:hover.website {
+            box-shadow: 0 0 20px #34a853;
+        }
+
+        .social-link:hover.donate {
+            box-shadow: 0 0 20px #ff6f61;
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #eee;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Carousel */
+        .carousel-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto 80px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 300px;
+            margin: 0 10px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            z-index: 2;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        @media(max-width: 600px) {
+            .carousel-item {
+                min-width: 80%;
+            }
+
+            .carousel-item img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background slideshow -->
+    <div class="slideshow">
+        <div class="slideshow-image image1"></div>
+        <div class="slideshow-image image2"></div>
+        <div class="slideshow-image image3"></div>
+        <div class="slideshow-image image4"></div>
+        <div class="slideshow-image image5"></div>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- Main container -->
+    <div class="container">
+        <img src="/ena.jpeg" alt="Engage Now Africa Logo" class="logo">
+        <h1>
+            Follow Engage Now Africa
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Ghana.svg" alt="Ghana Flag"
+                class="flag">
+        </h1>
+
+        <div class="links">
+            <a href="https://www.facebook.com/engagenowafricaghana" class="social-link facebook" target="_blank"><i
+                    class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://www.instagram.com/engagenowafricaghana" class="social-link instagram" target="_blank"><i
+                    class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.linkedin.com/company/engagenowafricaghana" class="social-link linkedin"
+                target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://www.youtube.com/@engagenowafricaghana" class="social-link youtube" target="_blank"><i
+                    class="fab fa-youtube"></i> YouTube</a>
+            <a href="https://engagenowafrica.org/" class="social-link website" target="_blank"><i
+                    class="fas fa-globe"></i> Website</a>
+            <a href="https://givebutter.com/HealRescueLift" class="social-link donate" target="_blank"><i
+                    class="fas fa-hand-holding-heart"></i> Donate</a>
+        </div>
+
+        <footer>
+            <p>&copy; <span id="currentYear"></span> Engage Now Africa</p>
+            <p>Designed by <a href="https://www.linkedin.com/in/erickwakyeboateng/" target="_blank">Eric Kwakye
+                    Boateng</a></p>
+        </footer>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+            <div class="carousel-item"><img src="/carousel1.jpg" alt=""></div>
+            <div class="carousel-item"><img src="/carousel3.jpeg" alt=""></div>
+            <div class="carousel-item"><img src="/carousel4.jpeg" alt=""></div>
+            <div class="carousel-item"><img src="/carousel5.jpeg" alt=""></div>
+            <div class="carousel-item"><img src="/carousel6.jpeg" alt=""></div>
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+
+        let index = 1;
+        const firstClone = items[0].cloneNode(true);
+        const lastClone = items[items.length - 1].cloneNode(true);
+
+        track.appendChild(firstClone);
+        track.insertBefore(lastClone, track.firstChild);
+
+        let slides = document.querySelectorAll('.carousel-item');
+        const itemWidth = slides[0].offsetWidth + 20;
+        track.style.transform = `translateX(${-itemWidth * index}px)`;
+
+        function moveToSlide() {
+            track.style.transition = "transform 0.6s ease-in-out";
+            track.style.transform = `translateX(${-itemWidth * index}px)`;
+        }
+
+        function resetPosition() {
+            track.style.transition = "none";
+            if (slides[index].isSameNode(firstClone)) {
+                index = 1;
+                track.style.transform = `translateX(${-itemWidth * index}px)`;
+            } else if (slides[index].isSameNode(lastClone)) {
+                index = slides.length - 2;
+                track.style.transform = `translateX(${-itemWidth * index}px)`;
+            }
+        }
+
+        next.addEventListener('click', () => {
+            if (index >= slides.length - 1) return;
+            index++;
+            moveToSlide();
+        });
+
+        prev.addEventListener('click', () => {
+            if (index <= 0) return;
+            index--;
+            moveToSlide();
+        });
+
+        track.addEventListener('transitionend', resetPosition);
+
+        // Auto-slide
+        setInterval(() => {
+            index++;
+            moveToSlide();
+        }, 4000);
+    </script>
+</body>
+
+</html>
